@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://cysm1gt7puvgs"]
+[gd_scene load_steps=15 format=3 uid="uid://cysm1gt7puvgs"]
 
 [ext_resource type="Script" uid="uid://cdfmcmda4ysef" path="res://Menu/scene/Tutorial.cs" id="1_51bf2"]
 [ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="1_bn73f"]
+[ext_resource type="FontFile" uid="uid://855cp6fhsml3" path="res://Menu/assets/Child Chat.ttf" id="3_fosut"]
+[ext_resource type="Texture2D" uid="uid://v5fov3kqsh8d" path="res://Menu/assets/ButtonGeneral_normal.png" id="4_puqbj"]
+[ext_resource type="Texture2D" uid="uid://b27vdp1c5fx6j" path="res://Menu/assets/ButtonGeneral_confirm.png" id="5_4tm16"]
+[ext_resource type="Texture2D" uid="uid://1a7focdystb3" path="res://Menu/assets/ButtonGeneral_hover.png" id="6_7ruob"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nrkr4"]
+texture = ExtResource("4_puqbj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_laodx"]
+texture = ExtResource("5_4tm16")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_38b6q"]
+texture = ExtResource("6_7ruob")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xke8f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p58p0"]
+texture = ExtResource("4_puqbj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lowfq"]
+texture = ExtResource("5_4tm16")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6et6w"]
+texture = ExtResource("6_7ruob")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dehas"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -10,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_51bf2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -23,10 +50,19 @@ texture = ExtResource("1_bn73f")
 
 [node name="Kembali" type="Button" parent="."]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 13.0
-offset_right = 144.0
-offset_bottom = 83.0
+offset_left = 10.000003
+offset_top = 5.0
+offset_right = 141.0
+offset_bottom = 75.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fosut")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxTexture_nrkr4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_laodx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_38b6q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xke8f")
 text = "Kembali"
 
 [node name="Selanjutnya" type="Button" parent="."]
@@ -34,9 +70,17 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -145.0
-offset_top = 13.0
-offset_right = -12.0
-offset_bottom = 83.0
+offset_left = -183.0
+offset_top = 5.000001
+offset_right = -50.0
+offset_bottom = 75.0
 grow_horizontal = 0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fosut")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxTexture_p58p0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lowfq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6et6w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dehas")
 text = "Selanjutnya"

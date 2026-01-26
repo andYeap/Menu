@@ -8,8 +8,8 @@ public partial class MainMenu : Control
 
 	public override void _Ready()
 	{
-		_mulaiBtn = GetNode<Button>("CenterContainer/VBoxContainer/Mulai");
-		_keluarBtn = GetNode<Button>("CenterContainer/VBoxContainer/Keluar");
+		_mulaiBtn = GetNode<Button>("Mulai");
+		_keluarBtn = GetNode<Button>("Keluar");
 
 		_mulaiBtn.ReleaseFocus();
 		_keluarBtn.ReleaseFocus();

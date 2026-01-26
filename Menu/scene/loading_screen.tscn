@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://by7e05k7hwd0b"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_cysvg"]
+script/source = "using Godot;
+using System;
+
+public partial class LoadingScreen : CanvasLayer
+{
+    public override void _Ready()
+    {
+        ColorRect chalk = GetNode<ColorRect>(\"ColorRect\");
+        
+        if (chalk != null)
+        {
+            chalk.PivotOffset = Vector2.Zero;
+            chalk.Scale = Vector2.One;
+
+            Tween tween = CreateTween();
+            tween.TweenInterval(0.1f);
+            tween.TweenProperty(chalk, \"scale\", Vector2.Zero, 1.2f)
+                 .SetTrans(Tween.TransitionType.Quart)
+                 .SetEase(Tween.EaseType.Out);
+
+            tween.Finished += () => QueueFree();
+        }
+        else
+        {
+            QueueFree();
+        }
+    }
+}
+"
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("CSharpScript_cysvg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

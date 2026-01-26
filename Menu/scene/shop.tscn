@@ -1,11 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj2nio8qv1pho"]
+[gd_scene load_steps=7 format=3 uid="uid://dj2nio8qv1pho"]
 
 [ext_resource type="Texture2D" uid="uid://f12x5dcw4qgs" path="res://Menu/assets/orange.jpg" id="1_dlrev"]
 [ext_resource type="Script" uid="uid://bawwgmq1i1hyt" path="res://Menu/scene/Shop.cs" id="1_mo1m6"]
 [ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="2_8cup1"]
+[ext_resource type="FontFile" uid="uid://855cp6fhsml3" path="res://Menu/assets/Child Chat.ttf" id="4_047ec"]
 [ext_resource type="PackedScene" uid="uid://c7x5q0hfto3te" path="res://Menu/scene/Bahan/Telur.tscn" id="5_047ec"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8cup1"]
+font = ExtResource("4_047ec")
 font_size = 108
 
 [node name="Shop" type="Control"]
@@ -76,7 +78,7 @@ offset_left = 53.0
 offset_top = 306.0
 offset_right = 249.0
 offset_bottom = 443.0
-text = "Koin : "
+text = "Koin :"
 label_settings = SubResource("LabelSettings_8cup1")
 
 [node name="Kembali" type="Button" parent="."]
