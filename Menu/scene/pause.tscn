@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://jsfgjlfw7q16"]
+
+[ext_resource type="FontFile" uid="uid://du8lfgc2okb6h" path="res://Menu/Rada Cenak Trial.ttf" id="1_7122h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_exbqw"]
+load_path = "res://.godot/imported/orange.jpg-29199f5863c55c9bff06f73505f39e95.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ym1l5"]
+font = ExtResource("1_7122h")
+font_size = 64
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Orange" type="Sprite2D" parent="."]
+position = Vector2(963, 503)
+scale = Vector2(1.8505155, 0.6137898)
+texture = SubResource("CompressedTexture2D_exbqw")
+
+[node name="Pause" type="Label" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 224.0
+offset_right = 1020.0
+offset_bottom = 305.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_ym1l5")
+
+[node name="Resume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 349.0
+offset_right = 1053.0
+offset_bottom = 441.0
+text = "Resume"
+
+[node name="Resume2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 467.0
+offset_right = 1051.0
+offset_bottom = 559.0
+text = "Menu"

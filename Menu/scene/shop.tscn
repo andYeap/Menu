@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj2nio8qv1pho"]
+
+[ext_resource type="Texture2D" uid="uid://f12x5dcw4qgs" path="res://Menu/assets/orange.jpg" id="1_dlrev"]
+[ext_resource type="Script" uid="uid://bawwgmq1i1hyt" path="res://Menu/scene/Shop.cs" id="1_mo1m6"]
+[ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="2_8cup1"]
+[ext_resource type="PackedScene" uid="uid://c7x5q0hfto3te" path="res://Menu/scene/Bahan/Telur.tscn" id="5_047ec"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8cup1"]
+font_size = 108
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mo1m6")
+
+[node name="Layout" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Orange" type="Sprite2D" parent="Layout"]
+position = Vector2(1002.5, 485.75)
+scale = Vector2(3.475945, 1.3833174)
+texture = ExtResource("1_dlrev")
+
+[node name="Hijau" type="Sprite2D" parent="Layout"]
+position = Vector2(269.75, 615.0001)
+scale = Vector2(0.65828806, 0.5581039)
+texture = ExtResource("2_8cup1")
+
+[node name="Hijau2" type="Sprite2D" parent="Layout"]
+position = Vector2(963.68756, 131.00002)
+scale = Vector2(1.0171536, 0.14220183)
+texture = ExtResource("2_8cup1")
+
+[node name="Hijau3" type="Sprite2D" parent="Layout"]
+position = Vector2(1628.8436, 131.00002)
+scale = Vector2(0.64716387, 0.14373088)
+texture = ExtResource("2_8cup1")
+
+[node name="Hijau5" type="Sprite2D" parent="Layout"]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(268, 377)
+scale = Vector2(0.6157015, 0.13685015)
+texture = ExtResource("2_8cup1")
+
+[node name="Hijau4" type="Sprite2D" parent="Layout"]
+position = Vector2(1205.4999, 615)
+scale = Vector2(1.6752716, 0.558104)
+texture = ExtResource("2_8cup1")
+
+[node name="Khitam" type="Sprite2D" parent="Layout"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(999.00006, 617)
+scale = Vector2(0.00815194, 0.56116205)
+texture = ExtResource("2_8cup1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 77.0
+offset_right = 365.0
+offset_bottom = 214.0
+text = "Shop"
+label_settings = SubResource("LabelSettings_8cup1")
+
+[node name="Coin" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 306.0
+offset_right = 249.0
+offset_bottom = 443.0
+text = "Koin : "
+label_settings = SubResource("LabelSettings_8cup1")
+
+[node name="Kembali" type="Button" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 819.0
+offset_right = 322.0
+offset_bottom = 906.0
+text = "Kembali"
+
+[node name="Telur" parent="." instance=ExtResource("5_047ec")]
+position = Vector2(791, 628)

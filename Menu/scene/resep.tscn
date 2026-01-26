@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx2jekd68ywd"]
+
+[ext_resource type="Texture2D" uid="uid://f12x5dcw4qgs" path="res://Menu/assets/orange.jpg" id="1_r78v5"]
+[ext_resource type="Script" uid="uid://cwwqs5jnnf4y6" path="res://Menu/scene/Resep.cs" id="1_t0ntx"]
+[ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="2_cvhca"]
+[ext_resource type="FontFile" uid="uid://bhh1s8byrbwuf" path="res://Menu/assets/Rada Cenak Trial.ttf" id="3_cvhca"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfnqe"]
+font = ExtResource("3_cvhca")
+font_size = 128
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0ntx"]
+size = Vector2(293, 423)
+
+[node name="Resep" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_t0ntx")
+
+[node name="Layout" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Orange" type="Sprite2D" parent="Layout"]
+position = Vector2(982.5, 470.25)
+scale = Vector2(3.4793813, 1.3553519)
+texture = ExtResource("1_r78v5")
+
+[node name="Cover" type="Sprite2D" parent="Layout"]
+position = Vector2(957.75, 605)
+scale = Vector2(2.519701, 0.6666667)
+texture = ExtResource("2_cvhca")
+
+[node name="Khitam" type="Sprite2D" parent="Layout"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(956.5, 611)
+scale = Vector2(0.0040760566, 0.6529052)
+texture = ExtResource("2_cvhca")
+
+[node name="DetailBahan" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Cover" type="Sprite2D" parent="DetailBahan"]
+modulate = Color(1, 0.54102784, 0, 1)
+position = Vector2(857.875, 591.125)
+scale = Vector2(1.3148777, 0.44514528)
+texture = ExtResource("2_cvhca")
+
+[node name="Close" type="Button" parent="DetailBahan"]
+layout_mode = 0
+offset_left = 1306.0
+offset_top = 285.0
+offset_right = 1380.0
+offset_bottom = 347.0
+text = "X"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_right = 150.5
+offset_bottom = 162.0
+grow_horizontal = 2
+text = "Resep"
+label_settings = SubResource("LabelSettings_rfnqe")
+
+[node name="Kembali" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 25.0
+offset_right = 188.0
+offset_bottom = 112.0
+text = "Kembali"
+
+[node name="Telur" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Telur"]
+modulate = Color(0.3720012, 0.49547005, 0.9147881, 1)
+position = Vector2(215, 418)
+scale = Vector2(0.39538047, 0.32645258)
+texture = ExtResource("2_cvhca")
+
+[node name="Area2D" type="Area2D" parent="Telur"]
+position = Vector2(221, 414)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Telur/Area2D"]
+position = Vector2(-4.5, 3.5)
+shape = SubResource("RectangleShape2D_t0ntx")
