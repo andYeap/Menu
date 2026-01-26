@@ -3,18 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="1_4djwe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj084"]
-size = Vector2(392, 586)
+size = Vector2(337, 533)
 
 [node name="Telur" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.30692267, 0.3069227, 0.3069227, 1)
-position = Vector2(1.9999924, 1)
-scale = Vector2(0.5251359, 0.45412844)
+position = Vector2(2.4999886, -1.4999866)
+scale = Vector2(0.4578804, 0.40749237)
 texture = ExtResource("1_4djwe")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3, 2)
+position = Vector2(2.5, -1.5)
 shape = SubResource("RectangleShape2D_gj084")
