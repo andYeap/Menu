@@ -4,14 +4,12 @@
 [ext_resource type="Script" uid="uid://cwwqs5jnnf4y6" path="res://Menu/scene/Resep.cs" id="1_t0ntx"]
 [ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="2_cvhca"]
 [ext_resource type="FontFile" uid="uid://bhh1s8byrbwuf" path="res://Menu/assets/Rada Cenak Trial.ttf" id="3_cvhca"]
+[ext_resource type="PackedScene" uid="uid://c7x5q0hfto3te" path="res://Menu/scene/Bahan/Telur.tscn" id="5_rwt8e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rfnqe"]
 font = ExtResource("3_cvhca")
 font_size = 128
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0ntx"]
-size = Vector2(293, 423)
 
 [node name="Resep" type="Control"]
 layout_mode = 3
@@ -86,17 +84,5 @@ offset_right = 188.0
 offset_bottom = 112.0
 text = "Kembali"
 
-[node name="Telur" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Telur"]
-modulate = Color(0.3720012, 0.49547005, 0.9147881, 1)
-position = Vector2(215, 418)
-scale = Vector2(0.39538047, 0.32645258)
-texture = ExtResource("2_cvhca")
-
-[node name="Area2D" type="Area2D" parent="Telur"]
-position = Vector2(221, 414)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Telur/Area2D"]
-position = Vector2(-4.5, 3.5)
-shape = SubResource("RectangleShape2D_t0ntx")
+[node name="Telur" parent="." instance=ExtResource("5_rwt8e")]
+position = Vector2(235, 478)

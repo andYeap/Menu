@@ -43,16 +43,8 @@ public partial class Level : Control
 
 private void OnKembaliPressed()
 {
-	GD.Print("Memulai transisi ke scene Level...");
-	
-	PackedScene loadingTransitionScene = GD.Load<PackedScene>("res://Path/To/Your/LoadingTransition.tscn");
-	LoadingTransition transition = loadingTransitionScene.Instantiate<LoadingTransition>();
-	
-	transition.NextScenePath = "res://Menu/scene/tutorial.tscn"; 
-	
-	GetTree().Root.AddChild(transition);
-
-	this.ProcessMode = ProcessModeEnum.Disabled;
+	GD.Print("Kembali ke Tutorial");
+	GetTree().ChangeSceneToFile("res://Menu/scene/tutorial.tscn");
 }
 
 	private void OnShopPressed()
