@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://cq6e5eb8rw2i0"]
+
+[ext_resource type="Script" uid="uid://drn8t38er5a0m" path="res://Menu/scene/MainMenu.cs" id="1_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://f12x5dcw4qgs" path="res://Menu/assets/orange.jpg" id="2_0iwki"]
+[ext_resource type="FontFile" uid="uid://855cp6fhsml3" path="res://Menu/assets/Child Chat.ttf" id="3_h5p7v"]
+[ext_resource type="Texture2D" uid="uid://v5fov3kqsh8d" path="res://Menu/assets/ButtonGeneral_normal.png" id="4_21ppu"]
+[ext_resource type="Texture2D" uid="uid://b27vdp1c5fx6j" path="res://Menu/assets/ButtonGeneral_confirm.png" id="5_twsqd"]
+[ext_resource type="Texture2D" uid="uid://1a7focdystb3" path="res://Menu/assets/ButtonGeneral_hover.png" id="6_uu2rf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h02ni"]
+texture = ExtResource("4_21ppu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdosq"]
+texture = ExtResource("5_twsqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy0k5"]
+texture = ExtResource("6_uu2rf")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svd2o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db3dl"]
+texture = ExtResource("4_21ppu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bi247"]
+texture = ExtResource("5_twsqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idunu"]
+texture = ExtResource("6_uu2rf")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w8y8c"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2fwvj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -194.5
+offset_right = 43.0
+offset_bottom = 680.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0iwki")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -279.5
+offset_top = 25.0
+offset_right = 365.5
+offset_bottom = 187.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_h5p7v")
+theme_override_font_sizes/font_size = 128
+text = "Cendana Le"
+
+[node name="Mulai" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -309.5
+offset_right = 45.5
+offset_bottom = -234.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_h5p7v")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_h02ni")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pdosq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wy0k5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_svd2o")
+text = "Mulai"
+
+[node name="Keluar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 880.5
+offset_top = 330.5
+offset_right = 1005.5
+offset_bottom = 405.5
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_h5p7v")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_db3dl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bi247")
+theme_override_styles/hover = SubResource("StyleBoxTexture_idunu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w8y8c")
+text = "Keluar"

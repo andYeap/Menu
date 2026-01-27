@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7x5q0hfto3te"]
+
+[ext_resource type="Texture2D" uid="uid://bq2ptsa0efeh3" path="res://Menu/assets/bahan1.png" id="1_4djwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj084"]
+size = Vector2(337, 533)
+
+[node name="Telur" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.4999847, -1.5000076)
+scale = Vector2(1.9704142, 2.3073595)
+texture = ExtResource("1_4djwe")
+region_enabled = true
+region_rect = Rect2(1177.2373, 18.881023, 169.03699, 231.5941)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, -1.5)
+shape = SubResource("RectangleShape2D_gj084")
