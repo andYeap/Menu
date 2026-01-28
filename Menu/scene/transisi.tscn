@@ -206,7 +206,7 @@ color = Color(0, 0, 0, 0)
 libraries = {
 &"": SubResource("AnimationLibrary_dm4yw")
 }
-speed_scale = 2.0
+speed_scale = 4.0
 
 [node name="Left" type="Sprite2D" parent="."]
 position = Vector2(10, 537)
