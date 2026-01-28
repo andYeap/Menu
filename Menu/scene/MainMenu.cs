@@ -9,37 +9,21 @@ public partial class MainMenu : Control
 	public override void _Ready()
 	{
 		_mulaiBtn = GetNode<Button>("Mulai");
-		_keluarBtn = GetNode<Button>("Keluar");
-
 		_mulaiBtn.Pressed += OnMulaiPressed;
-		_keluarBtn.Pressed += OnKeluarPressed;
+		_keluarBtn = GetNode<Button>("Keluar");
+		_keluarBtn.Pressed += () => GetTree().Quit();
 		
-		this.Modulate = new Color(1, 1, 1, 1);
+		Visible = true;
 	}
 
 	private void OnMulaiPressed()
 	{
-		SetProcessInput(false);
+		Visible = false;
 		_mulaiBtn.Disabled = true;
-
-		GD.Print("Tombol Mulai Ditekan - Memulai Animasi Fade Out...");
-
-		Tween fadeTween = CreateTween();
 		
-		fadeTween.TweenProperty(this, "modulate", new Color(0, 0, 0, 0), 0.6f)
-				 .SetTrans(Tween.TransitionType.Quart)
-				 .SetEase(Tween.EaseType.Out);
-
-		fadeTween.Finished += () => 
-		{
-			GD.Print("Pindah Scene sekarang.");
-			GetTree().ChangeSceneToFile("res://Menu/scene/tutorial.tscn");
-		};
-	}
-
-	private void OnKeluarPressed()
-	{
-		GD.Print("Keluar dari Game.");
-		GetTree().Quit();
+		var prefab = GD.Load<PackedScene>("res://Menu/scene/transisi.tscn");
+		var instance = prefab.Instantiate<Transisi>();
+		instance.sceneTujuan = "res://Menu/scene/tutorial.tscn";
+		GetTree().Root.AddChild(instance);
 	}
 }

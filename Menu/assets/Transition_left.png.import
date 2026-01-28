@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnhoelkcrt41u"
-path="res://.godot/imported/ButtonClose_confirm.png-9b9f256cc7f57b188fa8f8955bbd94cf.ctex"
+uid="uid://dw06t57bflwb7"
+path="res://.godot/imported/Transition_left.png-e95b4a7793627fb43773ae965f316b18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/assets/ButtonClose_confirm.png"
-dest_files=["res://.godot/imported/ButtonClose_confirm.png-9b9f256cc7f57b188fa8f8955bbd94cf.ctex"]
+source_file="res://Menu/assets/Transition_left.png"
+dest_files=["res://.godot/imported/Transition_left.png-e95b4a7793627fb43773ae965f316b18.ctex"]
 
 [params]
 

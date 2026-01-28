@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cysm1gt7puvgs"]
+[gd_scene load_steps=17 format=3 uid="uid://cysm1gt7puvgs"]
 
 [ext_resource type="Script" uid="uid://cdfmcmda4ysef" path="res://Menu/scene/Tutorial.cs" id="1_51bf2"]
 [ext_resource type="Texture2D" uid="uid://0b3sl76tidxf" path="res://Menu/assets/cover.jpg" id="1_bn73f"]
@@ -29,13 +29,25 @@ texture = ExtResource("6_7ruob")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dehas"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_fosut"]
+font = ExtResource("3_fosut")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_puqbj"]
+font = ExtResource("3_fosut")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
 [node name="Tutorial" type="Control"]
+z_index = 128
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_51bf2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -51,7 +63,7 @@ texture = ExtResource("1_bn73f")
 layout_mode = 0
 offset_left = 20.0
 offset_right = 190.0
-offset_bottom = 80.0
+offset_bottom = 81.0
 scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_fosut")
@@ -60,15 +72,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_nrkr4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_laodx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_38b6q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xke8f")
-text = "Kembali"
 
 [node name="Selanjutnya" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -275.0
-offset_right = -105.0
+offset_left = -298.0
+offset_right = -112.666626
 offset_bottom = 80.0
 grow_horizontal = 0
 scale = Vector2(1.5, 1.5)
@@ -79,4 +90,21 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_p58p0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_lowfq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6et6w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dehas")
+
+[node name="LabelKembali" type="Label" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 34.0
+offset_right = 228.0
+offset_bottom = 85.0
+text = "Kembali"
+label_settings = SubResource("LabelSettings_fosut")
+
+[node name="LabelSelanjutnya" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1632.0
+offset_top = 35.0
+offset_right = 1889.0
+offset_bottom = 86.0
 text = "Selanjutnya"
+label_settings = SubResource("LabelSettings_puqbj")
